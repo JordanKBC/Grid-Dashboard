@@ -29,7 +29,52 @@ body {
 
 .searchbar {
   display: grid;
-  grid-column: 3fr/2fr;
+  grid-template-columns: 0.3fr 4fr 1fr 0.5fr 1fr;
+  padding: 10px;
+  justify-items: center;
+  align-items: center;
+}
+
+.searchbar #search-input {
+  justify-self: start;
+  min-width: 100%;
+  min-height: 100%;
+  display:flex;
+  align-items: center;
+  margin-top: -5px;
+}
+
+#search-input input {
+  min-width: 90%;
+  height: 23px;
+  background-color: lightgray;
+  border: none;
+  border-radius: 15px;
+}
+
+.searchbar .profile {
+  justify-self: center;
+}
+
+.searchbar .profile img {
+  max-height: 70px;
+  max-width: auto;
+  border-radius: 50%;
+}
+
+.icon img {
+  max-height: 30px;
+  max-width: auto;
+}
+
+.icon.notification {
+  justify-self: center;
+}
+
+.searchbar #username {
+  justify-self: start;
+  font-size: 1.5rem;
+  font-weight: bold;
 }
 
 .sidebar {
