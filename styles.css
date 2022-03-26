@@ -14,7 +14,7 @@ body {
   margin: inherit;
   padding: inherit;
   display: grid;
-  grid-template-columns: 0.9fr 4fr;
+  grid-template-columns: 1fr 4fr;
   grid-template-rows: 1fr 5fr;
   height: 100%;
 }
@@ -30,8 +30,10 @@ body {
   padding: 10px;
   padding-left: 20px;
   padding-top: 5px;
+  position: relative;
+  z-index: 10;
+  box-shadow: 0px 2px 5px lightgray;
 }
-
 
 /* Header-Searchbar*/
 .searchbar {
@@ -47,7 +49,7 @@ body {
   justify-self: start;
   min-width: 100%;
   min-height: 100%;
-  display:flex;
+  display: flex;
   align-items: center;
   margin-top: -5px;
 }
@@ -87,12 +89,11 @@ body {
   font-weight: bold;
 }
 
-
 /* Header-Navbar*/
 .navbar {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  padding:inherit;
+  padding: inherit;
   padding-top: 0px;
   padding-bottom: 5px;
 }
@@ -110,10 +111,10 @@ body {
 
 .profile-welcome .greeting {
   padding-left: 20px;
-  display:grid;
+  display: grid;
   grid-template-rows: 1fr 2fr;
   align-items: center;
-  font-weight:bolder;
+  font-weight: bolder;
 }
 
 .greeting div:nth-child(1) {
@@ -125,18 +126,18 @@ body {
 }
 
 .upload-options {
-  display:grid;
-  grid-template-columns: repeat(3,100px);
+  display: grid;
+  grid-template-columns: repeat(3, 100px);
   align-items: center;
   justify-content: end;
-  gap:20px;
+  gap: 20px;
   padding-right: 80px;
 }
 
 .upload-options button {
   font-weight: bolder;
   color: white;
-  background-color:#16a34a;
+  background-color: #16a34a;
   border-radius: 15px;
   border: none;
   padding: 10px 30px;
@@ -152,10 +153,10 @@ body {
   grid-row: 1/3;
   grid-column: 1/2;
   display: grid;
-  grid-template-rows:0.4fr 1fr 1fr 1fr;
+  grid-template-rows: 0.4fr 1fr 1fr 1fr;
   align-items: center;
   justify-content: start;
-  padding:15px;
+  padding: 15px;
   padding-left: 50px;
   color: white;
   font-weight: bold;
@@ -164,22 +165,23 @@ body {
 
 .sidebar img {
   margin-right: 10px;
-  color:inherit;
+  color: inherit;
   display: inline;
 }
 
 .icon.dashboard {
-  font-size: 2rem;
-  overflow:auto;
+  overflow: auto;
   white-space: nowrap;
   display: flex;
+  align-items: center;
 }
 
 .icon.dashboard div {
+  font-size: 30px;
   display: inline;
 }
 
-.icon.dashboard img{
+.icon.dashboard img {
   max-height: 100px;
   max-width: auto;
   display: inline;
@@ -189,10 +191,10 @@ body {
   align-self: start;
   margin-top: 50px;
   padding-left: 5px;
-  display:grid;
-  grid-template-rows: repeat(5,1fr);
-  gap:15px;
-  color:inherit;
+  display: grid;
+  grid-template-rows: repeat(5, 1fr);
+  gap: 15px;
+  color: inherit;
 }
 
 .user-options div {
@@ -201,12 +203,102 @@ body {
 }
 
 .user-options div:hover {
-  color:lightgrey;
+  color: lightgrey;
 }
+
+/* Project Showcase Panel */
 
 .project-section {
-  background-color: white;
+  background-color: #F0F0F0;
   grid-column: 2/3;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  padding: 20px;
+  padding-top: 25px;
+  font: inherit;
+  column-gap: 20px;
 }
 
+.heading {
+  font-size: 1.5rem;
+  font-weight: bolder;
+  margin-bottom: 20px;
+}
 
+.showcase-panel {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px,1fr));
+  gap: 20px;
+}
+
+.panel-item {
+  background-color: white;
+  padding:30px;
+  border-radius: 15px;
+}
+
+.panel-item:hover {
+  border-left: 8px inset;
+  border-left-color: 	hotpink;
+}
+
+/* Misc Panel */
+.misc {
+  display:grid;
+  grid-template-rows: 1fr 1fr;
+  gap: 20px;
+}
+
+.announcements {
+  display:grid;
+  grid-template-rows: 0.5fr 4fr;
+}
+
+.anno-panel, .friend-panel {
+  display:grid;
+  grid-template-rows: 1fr 1fr 1fr;
+  gap: 10px;
+  align-items: center;
+  background-color: white;
+  border-radius: 15px;
+  padding: 20px 10px;
+}
+
+.small-heading {
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+.anno-item {
+  padding:5px;
+}
+
+.mid {
+  border-top: 1px solid grey;
+  border-bottom: 1px solid grey;
+}
+
+.friend-panel {
+  gap: 20px;
+}
+
+.friend-item {
+  display: flex;
+  align-items: center;
+  margin-left: 10px;
+}
+
+.friend-item img {
+  max-height: 60px;
+  max-width: auto;
+  border-radius: 50%;
+}
+
+.friend-content {
+  margin-left: 10px;
+}
+
+.friend-content div:first-child {
+  font-weight: bold;
+  margin-bottom: 8px;
+}
