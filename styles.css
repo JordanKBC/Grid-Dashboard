@@ -14,7 +14,7 @@ body {
   margin: inherit;
   padding: inherit;
   display: grid;
-  grid-template-columns: 1fr 4fr;
+  grid-template-columns: 0.9fr 4fr;
   grid-template-rows: 1fr 5fr;
   height: 100%;
 }
@@ -58,6 +58,8 @@ body {
   background-color: lightgray;
   border: none;
   border-radius: 15px;
+  font-size: inherit;
+  font-weight: bold;
 }
 
 .searchbar .profile {
@@ -140,10 +142,66 @@ body {
   padding: 10px 30px;
 }
 
+.upload-options button:hover {
+  background-color: #86efac;
+}
+
+/* SideBar */
 .sidebar {
   background: #86efac;
   grid-row: 1/3;
   grid-column: 1/2;
+  display: grid;
+  grid-template-rows:0.4fr 1fr 1fr 1fr;
+  align-items: center;
+  justify-content: start;
+  padding:15px;
+  padding-left: 50px;
+  color: white;
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+.sidebar img {
+  margin-right: 10px;
+  color:inherit;
+  display: inline;
+}
+
+.icon.dashboard {
+  font-size: 2rem;
+  overflow:auto;
+  white-space: nowrap;
+  display: flex;
+}
+
+.icon.dashboard div {
+  display: inline;
+}
+
+.icon.dashboard img{
+  max-height: 100px;
+  max-width: auto;
+  display: inline;
+}
+
+.user-options {
+  align-self: start;
+  margin-top: 50px;
+  padding-left: 5px;
+  display:grid;
+  grid-template-rows: repeat(5,1fr);
+  gap:15px;
+  color:inherit;
+}
+
+.user-options div {
+  display: flex;
+  column-gap: 20px;
+}
+
+.user-options div:hover {
+  color:lightgrey;
 }
 
 .project-section {
@@ -151,4 +209,4 @@ body {
   grid-column: 2/3;
 }
 
-/* SideBar */
+
